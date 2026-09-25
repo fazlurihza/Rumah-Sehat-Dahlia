@@ -1,489 +1,798 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Rumah Sehat Dahlia &ndash; Layanan Psikologis Non-Klinis</title>
-<meta name="description" content="Rumah Sehat Dahlia menyediakan layanan konseling edukatif, konsultasi parenting, konseling remaja, dan psikoedukasi di Modayag, Bolaang Mongondow Timur."/>
-<meta property="og:title" content="Rumah Sehat Dahlia"/>
-<meta property="og:description" content="Membantu individu dan keluarga memahami diri, mengelola emosi, serta meningkatkan kualitas kehidupan sehari-hari."/>
-<link rel="icon" type="image/png" href="logo.png"/>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-tailwind.config={theme:{extend:{colors:{dahlia:{cream:"#FDFBF7",beige:"#F5EFE6",purple:"#4A1468",purple2:"#5C1D80",pink:"#F4A7C0",pink2:"#F9C8D9",muted:"#7B5C8C"}}}}}
-</script>
-<style>
-*,*::before,*::after{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:'Nunito',sans-serif;background:#FDFBF7;color:#2d1040;-webkit-font-smoothing:antialiased}
-.hero-bg{background:linear-gradient(135deg,#FDFBF7 0%,#F5EFE6 35%,#fce4ec 70%,#f3e5f5 100%)}
-.blob{border-radius:60% 40% 70% 30%/50% 60% 40% 50%}
-.blob2{border-radius:40% 60% 30% 70%/60% 40% 50% 50%}
-@keyframes float{0%,100%{transform:translateY(0)rotate(0)}33%{transform:translateY(-12px)rotate(1deg)}66%{transform:translateY(-6px)rotate(-1deg)}}
-.af{animation:float 6s ease-in-out infinite}
-.afs{animation:float 9s ease-in-out infinite 1.5s}
-.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
-.reveal.visible{opacity:1;transform:translateY(0)}
-@keyframes pulseRing{0%{box-shadow:0 0 0 0 rgba(74,20,104,.38)}70%{box-shadow:0 0 0 14px rgba(74,20,104,0)}100%{box-shadow:0 0 0 0 rgba(74,20,104,0)}}
-.bp{animation:pulseRing 2.4s ease-out infinite}
-.section-title::after{content:"";display:block;margin:.55rem auto 0;width:60px;height:4px;border-radius:9999px;background:linear-gradient(90deg,#4A1468,#F4A7C0)}
-#navbar{transition:background .4s ease,box-shadow .4s ease}
-#navbar.scrolled{background:rgba(253,251,247,.97)!important;box-shadow:0 2px 16px rgba(74,20,104,.1)}
-.nl{position:relative;display:inline-block}
-.nl::after{content:"";position:absolute;bottom:-3px;left:0;width:0;height:2px;background:#4A1468;border-radius:9999px;transition:width .3s ease}
-.nl:hover::after{width:100%}
-.sc{transition:transform .3s ease,box-shadow .3s ease}
-.sc:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(74,20,104,.15)}
-.pc{transition:transform .3s ease,box-shadow .3s ease}
-.pc:hover{transform:translateY(-5px);box-shadow:0 14px 38px rgba(74,20,104,.14)}
-#mm{max-height:0;opacity:0;overflow:hidden;transition:max-height .4s ease,opacity .4s ease}
-#mm.open{max-height:420px;opacity:1}
-#waf{position:fixed;bottom:1.5rem;right:1.5rem;z-index:999;transition:transform .2s ease}
-#waf:hover{transform:scale(1.1)}
-::-webkit-scrollbar{width:5px}
-::-webkit-scrollbar-track{background:#FDFBF7}
-::-webkit-scrollbar-thumb{background:#c084fc;border-radius:9999px}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rumah Sehat Dahlia &ndash; Layanan Psikologis Non-Klinis</title>
+  <meta name="description"
+    content="Rumah Sehat Dahlia menyediakan layanan konseling edukatif, konsultasi parenting, konseling remaja, dan psikoedukasi di Modayag, Bolaang Mongondow Timur." />
+  <meta property="og:title" content="Rumah Sehat Dahlia" />
+  <meta property="og:description"
+    content="Membantu individu dan keluarga memahami diri, mengelola emosi, serta meningkatkan kualitas kehidupan sehari-hari." />
+  <link rel="icon" type="image/png" href="logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Nunito:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { colors: { dahlia: { cream: "#FDFBF7", beige: "#F5EFE6", purple: "#4A1468", purple2: "#5C1D80", pink: "#F4A7C0", pink2: "#F9C8D9", muted: "#7B5C8C" } } } } }
+  </script>
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      background: #FDFBF7;
+      color: #2d1040;
+      -webkit-font-smoothing: antialiased
+    }
+
+    .hero-bg {
+      background: linear-gradient(135deg, #FDFBF7 0%, #F5EFE6 35%, #fce4ec 70%, #f3e5f5 100%)
+    }
+
+    .blob {
+      border-radius: 60% 40% 70% 30%/50% 60% 40% 50%
+    }
+
+    .blob2 {
+      border-radius: 40% 60% 30% 70%/60% 40% 50% 50%
+    }
+
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translateY(0)rotate(0)
+      }
+
+      33% {
+        transform: translateY(-12px)rotate(1deg)
+      }
+
+      66% {
+        transform: translateY(-6px)rotate(-1deg)
+      }
+    }
+
+    .af {
+      animation: float 6s ease-in-out infinite
+    }
+
+    .afs {
+      animation: float 9s ease-in-out infinite 1.5s
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity .7s ease, transform .7s ease
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0)
+    }
+
+    @keyframes pulseRing {
+      0% {
+        box-shadow: 0 0 0 0 rgba(74, 20, 104, .38)
+      }
+
+      70% {
+        box-shadow: 0 0 0 14px rgba(74, 20, 104, 0)
+      }
+
+      100% {
+        box-shadow: 0 0 0 0 rgba(74, 20, 104, 0)
+      }
+    }
+
+    .bp {
+      animation: pulseRing 2.4s ease-out infinite
+    }
+
+    .section-title::after {
+      content: "";
+      display: block;
+      margin: .55rem auto 0;
+      width: 60px;
+      height: 4px;
+      border-radius: 9999px;
+      background: linear-gradient(90deg, #4A1468, #F4A7C0)
+    }
+
+    #navbar {
+      transition: background .4s ease, box-shadow .4s ease
+    }
+
+    #navbar.scrolled {
+      background: rgba(253, 251, 247, .97) !important;
+      box-shadow: 0 2px 16px rgba(74, 20, 104, .1)
+    }
+
+    .nl {
+      position: relative;
+      display: inline-block
+    }
+
+    .nl::after {
+      content: "";
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #4A1468;
+      border-radius: 9999px;
+      transition: width .3s ease
+    }
+
+    .nl:hover::after {
+      width: 100%
+    }
+
+    .sc {
+      transition: transform .3s ease, box-shadow .3s ease
+    }
+
+    .sc:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 40px rgba(74, 20, 104, .15)
+    }
+
+    .pc {
+      transition: transform .3s ease, box-shadow .3s ease
+    }
+
+    .pc:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 14px 38px rgba(74, 20, 104, .14)
+    }
+
+    #mm {
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      transition: max-height .4s ease, opacity .4s ease
+    }
+
+    #mm.open {
+      max-height: 420px;
+      opacity: 1
+    }
+
+    #waf {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      z-index: 999;
+      transition: transform .2s ease
+    }
+
+    #waf:hover {
+      transform: scale(1.1)
+    }
+
+    ::-webkit-scrollbar {
+      width: 5px
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #FDFBF7
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #c084fc;
+      border-radius: 9999px
+    }
+  </style>
 </head>
+
 <body>
-<nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-[#FDFBF7]/80 backdrop-blur-md" role="navigation" aria-label="Navigasi utama">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex items-center justify-between h-16 md:h-20">
-      <a href="#hero" class="flex items-center gap-2 flex-shrink-0" aria-label="Rumah Sehat Dahlia">
-        <img src="logo.png" alt="Logo Rumah Sehat Dahlia" width="44" height="44" class="rounded-xl object-cover flex-shrink-0" style="width:44px;height:44px"/>
-        <span class="font-bold text-[#4A1468] leading-tight" style="font-family:'Playfair Display',Georgia,serif">
-          <span class="block text-lg" style="letter-spacing:.05em">Rumah Sehat Dahlia</span>
-        </span>
-      </a>
-      <div class="hidden md:flex items-center gap-7">
-        <a href="#tentang" class="nl text-[#4A1468] font-semibold text-sm">Tentang</a>
-        <a href="#layanan" class="nl text-[#4A1468] font-semibold text-sm">Layanan</a>
-        <a href="#harga"   class="nl text-[#4A1468] font-semibold text-sm">Harga</a>
-        <a href="#lokasi"  class="nl text-[#4A1468] font-semibold text-sm">Lokasi</a>
-        <a href="https://wa.me/62895806578761?text=Halo%20Rumah%20Sehat%20Dahlia,%20saya%20ingin%20membuat%20janji%20temu" target="_blank" rel="noopener noreferrer"
-           class="bg-[#4A1468] text-white text-sm font-bold px-5 py-2.5 rounded-full hover:bg-[#5C1D80] transition-all bp shadow-lg">
-          Buat Janji Temu
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-[#FDFBF7]/80 backdrop-blur-md" role="navigation"
+    aria-label="Navigasi utama">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 md:h-20">
+        <a href="#hero" class="flex items-center gap-2 flex-shrink-0" aria-label="Rumah Sehat Dahlia">
+          <img src="logo.png" alt="Logo Rumah Sehat Dahlia" width="44" height="44"
+            class="rounded-xl object-cover flex-shrink-0" style="width:44px;height:44px" />
+          <span class="font-bold text-[#4A1468] leading-tight" style="font-family:'Playfair Display',Georgia,serif">
+            <span class="block text-lg" style="letter-spacing:.05em">Rumah Sehat Dahlia</span>
+          </span>
         </a>
-      </div>
-      <button id="ham" aria-label="Buka menu" aria-expanded="false" aria-controls="mm"
-        class="md:hidden flex flex-col gap-1.5 p-2 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#4A1468]">
-        <span id="h1" class="w-6 h-0.5 bg-[#4A1468] rounded block transition-all duration-300"></span>
-        <span id="h2" class="w-6 h-0.5 bg-[#4A1468] rounded block transition-all duration-300"></span>
-        <span id="h3" class="w-6 h-0.5 bg-[#4A1468] rounded block transition-all duration-300"></span>
-      </button>
-    </div>
-    <div id="mm">
-      <div class="flex flex-col gap-1 pb-4 border-t border-[#F4A7C0]/30 pt-3">
-        <a href="#tentang" class="ml text-[#4A1468] font-semibold px-3 py-2.5 rounded-xl hover:bg-[#F9C8D9]/40 transition-colors">Tentang</a>
-        <a href="#layanan" class="ml text-[#4A1468] font-semibold px-3 py-2.5 rounded-xl hover:bg-[#F9C8D9]/40 transition-colors">Layanan</a>
-        <a href="#harga"   class="ml text-[#4A1468] font-semibold px-3 py-2.5 rounded-xl hover:bg-[#F9C8D9]/40 transition-colors">Harga</a>
-        <a href="#lokasi"  class="ml text-[#4A1468] font-semibold px-3 py-2.5 rounded-xl hover:bg-[#F9C8D9]/40 transition-colors">Lokasi</a>
-        <a href="https://wa.me/62895806578761?text=Halo%20Rumah%20Sehat%20Dahlia,%20saya%20ingin%20membuat%20janji%20temu" target="_blank" rel="noopener noreferrer"
-           class="mt-2 text-center bg-[#4A1468] text-white font-bold px-5 py-3 rounded-full hover:bg-[#5C1D80] transition-all">
-          Buat Janji Temu
-        </a>
-      </div>
-    </div>
-  </div>
-</nav>
-<section id="hero" class="hero-bg min-h-screen flex items-center relative overflow-hidden pt-20" aria-label="Selamat datang di Rumah Sehat Dahlia">
-  <div class="absolute -top-20 -left-20 w-80 h-80 blob af pointer-events-none" style="background:rgba(244,167,192,.22)"></div>
-  <div class="absolute top-1/3 -right-24 w-72 h-72 blob2 afs pointer-events-none" style="background:rgba(74,20,104,.07)"></div>
-  <div class="absolute bottom-16 left-1/4 w-44 h-44 blob pointer-events-none" style="background:rgba(249,200,217,.28);animation:float 11s ease-in-out infinite 2s"></div>
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 relative z-10 w-full">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-      <div class="text-center md:text-left">
-        <div class="inline-flex items-center gap-2 bg-[#F9C8D9]/60 text-[#4A1468] text-xs font-bold px-4 py-1.5 rounded-full mb-6 border border-[#F4A7C0]/40">
-          <span class="w-2 h-2 bg-[#4A1468] rounded-full animate-pulse"></span>
-          Layanan Psikologi Non Klinis
-        </div>
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#4A1468] leading-tight mb-5" style="font-family:'Playfair Display',Georgia,serif">
-          Rumah<br/>
-          <span class="italic text-[#7B5C8C]">Sehat</span><br/>
-          <span style="background:linear-gradient(135deg,#4A1468,#F4A7C0);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Dahlia</span>
-        </h1>
-        <p class="text-[#7B5C8C] text-base sm:text-lg leading-relaxed mb-8 max-w-lg mx-auto md:mx-0">
-          Membantu individu dan keluarga memahami diri, mengelola emosi, serta meningkatkan kualitas kehidupan sehari-hari melalui <strong class="text-[#4A1468]">pendekatan edukatif</strong>.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
-          <a href="https://wa.me/62895806578761?text=Halo%20Rumah%20Sehat%20Dahlia,%20saya%20ingin%20membuat%20janji%20temu" target="_blank" rel="noopener noreferrer"
-             class="inline-flex items-center justify-center gap-2 bg-[#4A1468] text-white font-bold text-base px-7 py-3.5 rounded-full hover:bg-[#5C1D80] transition-all bp shadow-xl">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Buat Janji Temu
-          </a>
-          <a href="#layanan" class="inline-flex items-center justify-center gap-2 bg-white/70 backdrop-blur-sm text-[#4A1468] font-bold text-base px-7 py-3.5 rounded-full border-2 border-[#4A1468]/30 hover:bg-[#F9C8D9]/50 transition-all">
-            Lihat Layanan
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+        <div class="hidden md:flex items-center gap-7">
+          <a href="#tentang" class="nl text-[#4A1468] font-semibold text-sm">Tentang</a>
+          <a href="#layanan" class="nl text-[#4A1468] font-semibold text-sm">Layanan</a>
+          <a href="#harga" class="nl text-[#4A1468] font-semibold text-sm">Harga</a>
+          <a href="#lokasi" class="nl text-[#4A1468] font-semibold text-sm">Lokasi</a>
+          <a href="https://wa.me/62895806578761?text=Halo%20Rumah%20Sehat%20Dahlia,%20saya%20ingin%20membuat%20janji%20temu"
+            target="_blank" rel="noopener noreferrer"
+            class="bg-[#4A1468] text-white text-sm font-bold px-5 py-2.5 rounded-full hover:bg-[#5C1D80] transition-all bp shadow-lg">
+            Buat Janji Temu
           </a>
         </div>
-        <div class="mt-10 flex flex-wrap justify-center md:justify-start gap-3">
-          <span class="flex items-center gap-1.5 bg-white/60 backdrop-blur-sm px-3.5 py-2 rounded-2xl border border-[#F4A7C0]/30 shadow text-xs font-semibold text-[#4A1468]">&#128274; Kerahasiaan Terjamin</span>
-          <span class="flex items-center gap-1.5 bg-white/60 backdrop-blur-sm px-3.5 py-2 rounded-2xl border border-[#F4A7C0]/30 shadow text-xs font-semibold text-[#4A1468]">&#128156; Lingkungan Aman</span>
-          <span class="flex items-center gap-1.5 bg-white/60 backdrop-blur-sm px-3.5 py-2 rounded-2xl border border-[#F4A7C0]/30 shadow text-xs font-semibold text-[#4A1468]">&#128218; Pendekatan Edukatif</span>
-        </div>
+        <button id="ham" aria-label="Buka menu" aria-expanded="false" aria-controls="mm"
+          class="md:hidden flex flex-col gap-1.5 p-2 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#4A1468]">
+          <span id="h1" class="w-6 h-0.5 bg-[#4A1468] rounded block transition-all duration-300"></span>
+          <span id="h2" class="w-6 h-0.5 bg-[#4A1468] rounded block transition-all duration-300"></span>
+          <span id="h3" class="w-6 h-0.5 bg-[#4A1468] rounded block transition-all duration-300"></span>
+        </button>
       </div>
-      <div class="hidden md:flex items-center justify-center af">
-        <div class="relative flex items-center justify-center">
-          <div class="absolute w-80 h-80 rounded-full" style="background:radial-gradient(circle,rgba(244,167,192,.32) 0%,rgba(245,239,230,0) 70%)"></div>
-          <img src="logo.png" alt="Ilustrasi logo Rumah Sehat Dahlia" class="relative z-10" style="width:300px;height:300px;object-fit:contain;filter:drop-shadow(0 20px 40px rgba(74,20,104,.2))"/>
+      <div id="mm">
+        <div class="flex flex-col gap-1 pb-4 border-t border-[#F4A7C0]/30 pt-3">
+          <a href="#tentang"
+            class="ml text-[#4A1468] font-semibold px-3 py-2.5 rounded-xl hover:bg-[#F9C8D9]/40 transition-colors">Tentang</a>
+          <a href="#layanan"
+            class="ml text-[#4A1468] font-semibold px-3 py-2.5 rounded-xl hover:bg-[#F9C8D9]/40 transition-colors">Layanan</a>
+          <a href="#harga"
+            class="ml text-[#4A1468] font-semibold px-3 py-2.5 rounded-xl hover:bg-[#F9C8D9]/40 transition-colors">Harga</a>
+          <a href="#lokasi"
+            class="ml text-[#4A1468] font-semibold px-3 py-2.5 rounded-xl hover:bg-[#F9C8D9]/40 transition-colors">Lokasi</a>
+          <a href="https://wa.me/62895806578761?text=Halo%20Rumah%20Sehat%20Dahlia,%20saya%20ingin%20membuat%20janji%20temu"
+            target="_blank" rel="noopener noreferrer"
+            class="mt-2 text-center bg-[#4A1468] text-white font-bold px-5 py-3 rounded-full hover:bg-[#5C1D80] transition-all">
+            Buat Janji Temu
+          </a>
         </div>
       </div>
     </div>
-  </div>
-  <div class="absolute bottom-0 left-0 right-0 overflow-hidden leading-none pointer-events-none" aria-hidden="true">
-    <svg viewBox="0 0 1440 56" preserveAspectRatio="none" style="width:100%;height:56px;display:block"><path d="M0,28 C480,56 960,0 1440,28 L1440,56 L0,56 Z" fill="#FDFBF7"/></svg>
-  </div>
-</section>
-<section id="tentang" class="py-20 bg-[#FDFBF7]" aria-labelledby="th2">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-14 reveal">
-      <span class="text-xs font-bold tracking-widest text-[#F4A7C0] uppercase">Mengenal Kami</span>
-      <h2 id="th2" class="text-3xl sm:text-4xl font-bold text-[#4A1468] mt-2 section-title" style="font-family:'Playfair Display',Georgia,serif">Tentang Kami</h2>
+  </nav>
+  <section id="hero" class="hero-bg min-h-screen flex items-center relative overflow-hidden pt-20"
+    aria-label="Selamat datang di Rumah Sehat Dahlia">
+    <div class="absolute -top-20 -left-20 w-80 h-80 blob af pointer-events-none"
+      style="background:rgba(244,167,192,.22)"></div>
+    <div class="absolute top-1/3 -right-24 w-72 h-72 blob2 afs pointer-events-none"
+      style="background:rgba(74,20,104,.07)"></div>
+    <div class="absolute bottom-16 left-1/4 w-44 h-44 blob pointer-events-none"
+      style="background:rgba(249,200,217,.28);animation:float 11s ease-in-out infinite 2s"></div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 relative z-10 w-full">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div class="text-center md:text-left">
+          <div
+            class="inline-flex items-center gap-2 bg-[#F9C8D9]/60 text-[#4A1468] text-xs font-bold px-4 py-1.5 rounded-full mb-6 border border-[#F4A7C0]/40">
+            <span class="w-2 h-2 bg-[#4A1468] rounded-full animate-pulse"></span>
+            Layanan Psikologi Non Klinis
+          </div>
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#4A1468] leading-tight mb-5"
+            style="font-family:'Playfair Display',Georgia,serif">
+            Rumah<br />
+            <span class="italic text-[#7B5C8C]">Sehat</span><br />
+            <span
+              style="background:linear-gradient(135deg,#4A1468,#F4A7C0);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Dahlia</span>
+          </h1>
+          <p class="text-[#7B5C8C] text-base sm:text-lg leading-relaxed mb-8 max-w-lg mx-auto md:mx-0">
+            Membantu individu dan keluarga memahami diri, mengelola emosi, serta meningkatkan kualitas kehidupan
+            sehari-hari melalui <strong class="text-[#4A1468]">pendekatan edukatif</strong>.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
+            <a href="https://wa.me/62895806578761?text=Halo%20Rumah%20Sehat%20Dahlia,%20saya%20ingin%20membuat%20janji%20temu"
+              target="_blank" rel="noopener noreferrer"
+              class="inline-flex items-center justify-center gap-2 bg-[#4A1468] text-white font-bold text-base px-7 py-3.5 rounded-full hover:bg-[#5C1D80] transition-all bp shadow-xl">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 flex-shrink-0" fill="currentColor"
+                viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+              </svg> Buat Janji Temu
+            </a>
+            <a href="#layanan"
+              class="inline-flex items-center justify-center gap-2 bg-white/70 backdrop-blur-sm text-[#4A1468] font-bold text-base px-7 py-3.5 rounded-full border-2 border-[#4A1468]/30 hover:bg-[#F9C8D9]/50 transition-all">
+              Lihat Layanan
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </a>
+          </div>
+          <div class="mt-10 flex flex-wrap justify-center md:justify-start gap-3">
+            <span
+              class="flex items-center gap-1.5 bg-white/60 backdrop-blur-sm px-3.5 py-2 rounded-2xl border border-[#F4A7C0]/30 shadow text-xs font-semibold text-[#4A1468]">&#128274;
+              Kerahasiaan Terjamin</span>
+            <span
+              class="flex items-center gap-1.5 bg-white/60 backdrop-blur-sm px-3.5 py-2 rounded-2xl border border-[#F4A7C0]/30 shadow text-xs font-semibold text-[#4A1468]">&#128156;
+              Lingkungan Aman</span>
+            <span
+              class="flex items-center gap-1.5 bg-white/60 backdrop-blur-sm px-3.5 py-2 rounded-2xl border border-[#F4A7C0]/30 shadow text-xs font-semibold text-[#4A1468]">&#128218;
+              Pendekatan Edukatif</span>
+          </div>
+        </div>
+        <div class="hidden md:flex items-center justify-center af">
+          <div class="relative flex items-center justify-center">
+            <div class="absolute w-80 h-80 rounded-full"
+              style="background:radial-gradient(circle,rgba(244,167,192,.32) 0%,rgba(245,239,230,0) 70%)"></div>
+            <img src="logo.png" alt="Ilustrasi logo Rumah Sehat Dahlia" class="relative z-10"
+              style="width:300px;height:300px;object-fit:contain;filter:drop-shadow(0 20px 40px rgba(74,20,104,.2))" />
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-      <div class="reveal">
-        <div class="bg-white rounded-3xl p-8 shadow-lg border border-[#F4A7C0]/20 relative overflow-hidden">
-          <div class="absolute top-0 left-0 right-0 h-1 rounded-t-3xl" style="background:linear-gradient(90deg,#4A1468,#F4A7C0,#4A1468)"></div>
-          <p class="text-[#7B5C8C] leading-relaxed mb-5"><strong class="text-[#4A1468]">Rumah Sehat Dahlia</strong> adalah layanan dukungan psikologis yang bersifat <em>edukatif dan non-klinis</em>. Kami hadir untuk menemani individu dan keluarga dalam perjalanan memahami diri sendiri, mengelola emosi, serta membangun kesehatan mental yang lebih baik setiap harinya.</p>
-          <p class="text-[#7B5C8C] leading-relaxed mb-6">Layanan kami dirancang sebagai ruang yang aman, nyaman, dan bebas stigma &mdash; di mana setiap orang dapat berbicara dan belajar tentang kesejahteraan psikologis mereka tanpa rasa takut dihakimi.</p>
-          <div class="bg-[#F5EFE6] border-l-4 border-[#4A1468] rounded-2xl p-4 mb-4" role="note">
-            <div class="flex items-start gap-3">
-              <span class="text-xl flex-shrink-0 mt-0.5">&#9888;&#65039;</span>
+    <div class="absolute bottom-0 left-0 right-0 overflow-hidden leading-none pointer-events-none" aria-hidden="true">
+      <svg viewBox="0 0 1440 56" preserveAspectRatio="none" style="width:100%;height:56px;display:block">
+        <path d="M0,28 C480,56 960,0 1440,28 L1440,56 L0,56 Z" fill="#FDFBF7" />
+      </svg>
+    </div>
+  </section>
+  <section id="tentang" class="py-20 bg-[#FDFBF7]" aria-labelledby="th2">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14 reveal">
+        <span class="text-xs font-bold tracking-widest text-[#F4A7C0] uppercase">Mengenal Kami</span>
+        <h2 id="th2" class="text-3xl sm:text-4xl font-bold text-[#4A1468] mt-2 section-title"
+          style="font-family:'Playfair Display',Georgia,serif">Tentang Kami</h2>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+        <div class="reveal">
+          <div class="bg-white rounded-3xl p-8 shadow-lg border border-[#F4A7C0]/20 relative overflow-hidden">
+            <div class="absolute top-0 left-0 right-0 h-1 rounded-t-3xl"
+              style="background:linear-gradient(90deg,#4A1468,#F4A7C0,#4A1468)"></div>
+            <p class="text-[#7B5C8C] leading-relaxed mb-5"><strong class="text-[#4A1468]">Rumah Sehat Dahlia</strong>
+              adalah layanan dukungan psikologis yang bersifat <em>edukatif dan non-klinis</em>. Kami hadir untuk
+              menemani individu dan keluarga dalam perjalanan memahami diri sendiri, mengelola emosi, serta membangun
+              kesehatan mental yang lebih baik setiap harinya.</p>
+            <p class="text-[#7B5C8C] leading-relaxed mb-6">Layanan kami dirancang sebagai ruang yang aman, nyaman, dan
+              bebas stigma &mdash; di mana setiap orang dapat berbicara dan belajar tentang kesejahteraan psikologis
+              mereka tanpa rasa takut dihakimi.</p>
+            <div class="bg-[#F5EFE6] border-l-4 border-[#4A1468] rounded-2xl p-4 mb-4" role="note">
+              <div class="flex items-start gap-3">
+                <span class="text-xl flex-shrink-0 mt-0.5">&#9888;&#65039;</span>
+                <div>
+                  <p class="text-[#4A1468] font-bold text-sm mb-1">Perhatian Penting</p>
+                  <p class="text-[#7B5C8C] text-sm leading-relaxed">Rumah Sehat Dahlia <strong>bukan klinik
+                      psikologi</strong>. Apabila diperlukan, klien akan dirujuk kepada psikolog atau tenaga klinis
+                    berlisensi yang tepat.</p>
+                </div>
+              </div>
+            </div>
+            <div class="rounded-2xl p-4 flex items-start gap-3" style="background:rgba(249,200,217,.35)">
+              <span class="text-2xl flex-shrink-0">&#128274;</span>
               <div>
-                <p class="text-[#4A1468] font-bold text-sm mb-1">Perhatian Penting</p>
-                <p class="text-[#7B5C8C] text-sm leading-relaxed">Rumah Sehat Dahlia <strong>bukan klinik psikologi</strong>.</p>
+                <p class="text-[#4A1468] font-bold text-sm mb-1">Kerahasiaan Klien</p>
+                <p class="text-[#7B5C8C] text-sm leading-relaxed">Setiap informasi yang disampaikan oleh klien
+                  <strong>dijaga dengan ketat</strong> dan tidak akan dibagikan kepada pihak manapun tanpa izin tertulis
+                  dari klien yang bersangkutan.</p>
               </div>
             </div>
           </div>
-          <div class="rounded-2xl p-4 flex items-start gap-3" style="background:rgba(249,200,217,.35)">
-            <span class="text-2xl flex-shrink-0">&#128274;</span>
+        </div>
+        <div class="reveal grid grid-cols-2 gap-4">
+          <div
+            class="bg-white rounded-3xl p-5 shadow border border-[#F4A7C0]/20 flex flex-col items-center text-center gap-2 hover:shadow-lg transition-shadow">
+            <div class="w-12 h-12 rounded-2xl flex items-center justify-center text-2xl"
+              style="background:rgba(244,167,192,.25)">&#127807;</div>
+            <h3 class="text-[#4A1468] font-bold text-sm">Pertumbuhan Diri</h3>
+            <p class="text-[#7B5C8C] text-xs leading-relaxed">Mendorong pemahaman diri yang mendalam</p>
+          </div>
+          <div
+            class="bg-white rounded-3xl p-5 shadow border border-[#F4A7C0]/20 flex flex-col items-center text-center gap-2 hover:shadow-lg transition-shadow">
+            <div class="w-12 h-12 rounded-2xl flex items-center justify-center text-2xl"
+              style="background:rgba(74,20,104,.1)">&#128172;</div>
+            <h3 class="text-[#4A1468] font-bold text-sm">Komunikasi Terbuka</h3>
+            <p class="text-[#7B5C8C] text-xs leading-relaxed">Ruang aman untuk berbagi cerita</p>
+          </div>
+          <div
+            class="bg-white rounded-3xl p-5 shadow border border-[#F4A7C0]/20 flex flex-col items-center text-center gap-2 hover:shadow-lg transition-shadow">
+            <div class="w-12 h-12 rounded-2xl flex items-center justify-center text-2xl"
+              style="background:rgba(244,167,192,.25)">&#127891;</div>
+            <h3 class="text-[#4A1468] font-bold text-sm">Berbasis Edukasi</h3>
+            <p class="text-[#7B5C8C] text-xs leading-relaxed">Pendekatan ilmiah yang mudah dipahami</p>
+          </div>
+          <div
+            class="bg-white rounded-3xl p-5 shadow border border-[#F4A7C0]/20 flex flex-col items-center text-center gap-2 hover:shadow-lg transition-shadow">
+            <div class="w-12 h-12 rounded-2xl flex items-center justify-center text-2xl"
+              style="background:rgba(74,20,104,.1)">&#129309;</div>
+            <h3 class="text-[#4A1468] font-bold text-sm">Penuh Empati</h3>
+            <p class="text-[#7B5C8C] text-xs leading-relaxed">Tanpa stigma, tanpa penghakiman</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="layanan" class="py-20 relative overflow-hidden"
+    style="background:linear-gradient(180deg,#FDFBF7 0%,#F5EFE6 50%,#FDFBF7 100%)" aria-labelledby="lh2">
+    <div class="absolute top-10 right-0 w-60 h-60 blob2 afs pointer-events-none"
+      style="background:rgba(244,167,192,.14)"></div>
+    <div class="absolute bottom-10 left-0 w-52 h-52 blob af pointer-events-none" style="background:rgba(74,20,104,.06)">
+    </div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center mb-14 reveal">
+        <span class="text-xs font-bold tracking-widest text-[#F4A7C0] uppercase">Yang Kami Tawarkan</span>
+        <h2 id="lh2" class="text-3xl sm:text-4xl font-bold text-[#4A1468] mt-2 section-title"
+          style="font-family:'Playfair Display',Georgia,serif">Layanan Kami</h2>
+        <p class="text-[#7B5C8C] mt-4 max-w-xl mx-auto text-sm">Berbagai layanan edukatif yang dapat disesuaikan dengan
+          kebutuhan Anda dan keluarga.</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <article class="sc bg-white rounded-3xl p-6 shadow border border-[#F4A7C0]/20 flex flex-col gap-4 reveal">
+          <div class="w-14 h-14 rounded-2xl flex items-center justify-center text-3xl"
+            style="background:linear-gradient(135deg,rgba(244,167,192,.35),rgba(244,167,192,.1))">&#129504;</div>
+          <div>
+            <h3 class="text-lg font-bold text-[#4A1468] mb-2" style="font-family:'Playfair Display',Georgia,serif">
+              Konseling Edukatif Individu</h3>
+            <p class="text-[#7B5C8C] text-sm leading-relaxed">Sesi personal untuk memahami dan mengatasi masalah
+              belajar, stres ringan, serta tantangan keseharian yang mengganggu produktivitas dan kesejahteraan.</p>
+          </div>
+          <div class="mt-auto pt-3 border-t border-[#F4A7C0]/20 flex flex-wrap gap-2">
+            <span class="text-xs bg-[#F9C8D9]/50 text-[#4A1468] px-2.5 py-1 rounded-full font-semibold">Masalah
+              Belajar</span>
+            <span class="text-xs bg-[#F9C8D9]/50 text-[#4A1468] px-2.5 py-1 rounded-full font-semibold">Stres
+              Ringan</span>
+          </div>
+        </article>
+        <article class="sc bg-white rounded-3xl p-6 shadow border border-[#F4A7C0]/20 flex flex-col gap-4 reveal">
+          <div class="w-14 h-14 rounded-2xl flex items-center justify-center text-3xl"
+            style="background:linear-gradient(135deg,rgba(74,20,104,.12),rgba(74,20,104,.05))">&#128106;</div>
+          <div>
+            <h3 class="text-lg font-bold text-[#4A1468] mb-2" style="font-family:'Playfair Display',Georgia,serif">
+              Konsultasi Parenting</h3>
+            <p class="text-[#7B5C8C] text-sm leading-relaxed">Pendampingan bagi orang tua dalam membangun pola asuh yang
+              sehat, meningkatkan komunikasi keluarga, dan menciptakan lingkungan rumah penuh kasih sayang.</p>
+          </div>
+          <div class="mt-auto pt-3 border-t border-[#F4A7C0]/20 flex flex-wrap gap-2">
+            <span class="text-xs bg-[#F9C8D9]/50 text-[#4A1468] px-2.5 py-1 rounded-full font-semibold">Pola Asuh</span>
+            <span class="text-xs bg-[#F9C8D9]/50 text-[#4A1468] px-2.5 py-1 rounded-full font-semibold">Komunikasi
+              Keluarga</span>
+          </div>
+        </article>
+        <article class="sc bg-white rounded-3xl p-6 shadow border border-[#F4A7C0]/20 flex flex-col gap-4 reveal">
+          <div class="w-14 h-14 rounded-2xl flex items-center justify-center text-3xl"
+            style="background:linear-gradient(135deg,rgba(244,167,192,.35),rgba(244,167,192,.1))">&#127775;</div>
+          <div>
+            <h3 class="text-lg font-bold text-[#4A1468] mb-2" style="font-family:'Playfair Display',Georgia,serif">
+              Konseling Remaja</h3>
+            <p class="text-[#7B5C8C] text-sm leading-relaxed">Ruang aman untuk remaja berbicara tentang tekanan sekolah,
+              hubungan pertemanan, identitas diri, dan tantangan masa tumbuh kembang.</p>
+          </div>
+          <div class="mt-auto pt-3 border-t border-[#F4A7C0]/20 flex flex-wrap gap-2">
+            <span class="text-xs bg-[#F9C8D9]/50 text-[#4A1468] px-2.5 py-1 rounded-full font-semibold">Stres
+              Sekolah</span>
+            <span class="text-xs bg-[#F9C8D9]/50 text-[#4A1468] px-2.5 py-1 rounded-full font-semibold">Relasi Teman
+              Sebaya</span>
+          </div>
+        </article>
+        <article class="sc bg-white rounded-3xl p-6 shadow border border-[#F4A7C0]/20 flex flex-col gap-4 reveal">
+          <div class="w-14 h-14 rounded-2xl flex items-center justify-center text-3xl"
+            style="background:linear-gradient(135deg,rgba(74,20,104,.12),rgba(74,20,104,.05))">&#128218;</div>
+          <div>
+            <h3 class="text-lg font-bold text-[#4A1468] mb-2" style="font-family:'Playfair Display',Georgia,serif">
+              Psikoedukasi &amp; Kelas Kecil</h3>
+            <p class="text-[#7B5C8C] text-sm leading-relaxed">Sesi kelompok interaktif yang membahas tema kesehatan
+              mental secara edukatif: manajemen emosi, teknik relaksasi, dan pemahaman psikologi dasar sehari-hari.</p>
+          </div>
+          <div class="mt-auto pt-3 border-t border-[#F4A7C0]/20 flex flex-wrap gap-2">
+            <span class="text-xs bg-[#F9C8D9]/50 text-[#4A1468] px-2.5 py-1 rounded-full font-semibold">Kelompok
+              Kecil</span>
+            <span
+              class="text-xs bg-[#F9C8D9]/50 text-[#4A1468] px-2.5 py-1 rounded-full font-semibold">Interaktif</span>
+          </div>
+        </article>
+        <article class="sc rounded-3xl p-7 flex flex-col gap-4 reveal sm:col-span-2"
+          style="background:linear-gradient(135deg,#4A1468 0%,#6B21A8 100%)">
+          <div class="flex items-start gap-4">
+            <div class="w-14 h-14 rounded-2xl flex items-center justify-center text-3xl flex-shrink-0 bg-white/15">
+              &#128269;</div>
             <div>
-              <p class="text-[#4A1468] font-bold text-sm mb-1">Kerahasiaan Klien</p>
-              <p class="text-[#7B5C8C] text-sm leading-relaxed">Setiap informasi yang disampaikan oleh klien <strong>dijaga dengan ketat</strong> dan tidak akan dibagikan kepada pihak manapun tanpa izin tertulis dari klien yang bersangkutan.</p>
+              <span
+                class="inline-flex items-center gap-1.5 bg-[#F4A7C0]/30 text-white text-xs font-bold px-3 py-1 rounded-full mb-2">Langkah
+                Awal</span>
+              <h3 class="text-xl font-bold text-white mb-2" style="font-family:'Playfair Display',Georgia,serif">
+                Screening &amp; Observasi Awal</h3>
+              <p class="text-white/80 text-sm leading-relaxed">Sesi awal untuk memahami kondisi dan kebutuhan klien
+                secara menyeluruh. Hasil observasi membantu menentukan layanan yang paling sesuai, atau memberikan
+                rujukan ke profesional yang tepat bila diperlukan.</p>
+            </div>
+          </div>
+          <div class="pt-3 border-t border-white/20 flex flex-wrap gap-2">
+            <span class="text-xs bg-white/20 text-white px-2.5 py-1 rounded-full font-semibold">Asesmen Awal</span>
+            <span class="text-xs bg-white/20 text-white px-2.5 py-1 rounded-full font-semibold">Rekomendasi
+              Layanan</span>
+            <span class="text-xs bg-white/20 text-white px-2.5 py-1 rounded-full font-semibold">Sistem Rujukan</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+  <section id="harga" class="py-20 bg-[#FDFBF7]" aria-labelledby="hh2">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14 reveal">
+        <span class="text-xs font-bold tracking-widest text-[#F4A7C0] uppercase">Transparan &amp; Terjangkau</span>
+        <h2 id="hh2" class="text-3xl sm:text-4xl font-bold text-[#4A1468] mt-2 section-title"
+          style="font-family:'Playfair Display',Georgia,serif">Harga Layanan</h2>
+        <p class="text-[#7B5C8C] mt-4 max-w-md mx-auto text-sm">Kami percaya kesehatan mental harus dapat diakses oleh
+          semua orang.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div
+          class="pc bg-white rounded-3xl p-7 shadow border border-[#F4A7C0]/20 flex flex-col items-center text-center reveal">
+          <div class="w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mb-4"
+            style="background:linear-gradient(135deg,rgba(244,167,192,.35),rgba(244,167,192,.1))">&#128483;&#65039;
+          </div>
+          <h3 class="font-bold text-[#4A1468] mb-1 text-lg" style="font-family:'Playfair Display',Georgia,serif">
+            Konseling &amp; Konsultasi</h3>
+          <p class="text-xs text-[#7B5C8C] mb-4">Per sesi (&#177;60 menit)</p>
+          <div class="bg-[#F5EFE6] rounded-2xl px-5 py-3 w-full mb-4">
+            <p class="text-2xl font-bold text-[#4A1468]" style="font-family:'Playfair Display',Georgia,serif">Rp 50.000
+            </p>
+            <p class="text-xs text-[#7B5C8C]">&ndash; Rp 100.000 / sesi</p>
+          </div>
+          <ul class="w-full text-left space-y-2">
+            <li class="flex items-center gap-2 text-sm text-[#7B5C8C]"><span
+                class="text-[#4A1468] font-bold">&#10003;</span>Konseling Edukatif Individu</li>
+            <li class="flex items-center gap-2 text-sm text-[#7B5C8C]"><span
+                class="text-[#4A1468] font-bold">&#10003;</span>Konsultasi Parenting</li>
+            <li class="flex items-center gap-2 text-sm text-[#7B5C8C]"><span
+                class="text-[#4A1468] font-bold">&#10003;</span>Konseling Remaja</li>
+          </ul>
+        </div>
+        <div class="pc rounded-3xl p-7 flex flex-col items-center text-center reveal relative overflow-hidden"
+          style="background:linear-gradient(160deg,#4A1468 0%,#7B2D96 100%)">
+          <div class="absolute top-4 right-4"><span
+              class="text-xs font-bold bg-[#F4A7C0] text-[#4A1468] px-2.5 py-1 rounded-full">Populer</span></div>
+          <div class="w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mb-4 bg-white/15">&#128218;</div>
+          <h3 class="font-bold text-white mb-1 text-lg" style="font-family:'Playfair Display',Georgia,serif">
+            Psikoedukasi &amp; Kelas</h3>
+          <p class="text-xs text-white/70 mb-4">Per orang per sesi</p>
+          <div class="bg-white/15 rounded-2xl px-5 py-3 w-full mb-4">
+            <p class="text-2xl font-bold text-white" style="font-family:'Playfair Display',Georgia,serif">Rp 25.000</p>
+            <p class="text-xs text-white/80">&ndash; Rp 75.000 / orang</p>
+          </div>
+          <ul class="w-full text-left space-y-2">
+            <li class="flex items-center gap-2 text-sm text-white/85"><span
+                class="text-[#F4A7C0] font-bold">&#10003;</span>Kelas psikoedukasi tematis</li>
+            <li class="flex items-center gap-2 text-sm text-white/85"><span
+                class="text-[#F4A7C0] font-bold">&#10003;</span>Diskusi kelompok kecil</li>
+            <li class="flex items-center gap-2 text-sm text-white/85"><span
+                class="text-[#F4A7C0] font-bold">&#10003;</span>Materi &amp; modul tersedia</li>
+          </ul>
+        </div>
+        <div
+          class="pc bg-white rounded-3xl p-7 shadow border border-[#F4A7C0]/20 flex flex-col items-center text-center reveal">
+          <div class="w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mb-4"
+            style="background:linear-gradient(135deg,rgba(74,20,104,.12),rgba(74,20,104,.05))">&#128269;</div>
+          <h3 class="font-bold text-[#4A1468] mb-1 text-lg" style="font-family:'Playfair Display',Georgia,serif">
+            Screening &amp; Observasi</h3>
+          <p class="text-xs text-[#7B5C8C] mb-4">Per orang per sesi</p>
+          <div class="bg-[#F5EFE6] rounded-2xl px-5 py-3 w-full mb-4">
+            <p class="text-2xl font-bold text-[#4A1468]" style="font-family:'Playfair Display',Georgia,serif">Rp 100.000
+            </p>
+            <p class="text-xs text-[#7B5C8C]">&ndash; Rp 150.000 / orang</p>
+          </div>
+          <ul class="w-full text-left space-y-2">
+            <li class="flex items-center gap-2 text-sm text-[#7B5C8C]"><span
+                class="text-[#4A1468] font-bold">&#10003;</span>Asesmen kebutuhan awal</li>
+            <li class="flex items-center gap-2 text-sm text-[#7B5C8C]"><span
+                class="text-[#4A1468] font-bold">&#10003;</span>Laporan observasi ringkas</li>
+            <li class="flex items-center gap-2 text-sm text-[#7B5C8C]"><span
+                class="text-[#4A1468] font-bold">&#10003;</span>Rekomendasi layanan lanjut</li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-8 rounded-2xl p-4 text-center reveal" style="background:rgba(249,200,217,.4)" role="note">
+        <p class="text-[#4A1468] text-sm"><strong>&#128204; Catatan:</strong> Harga dapat menyesuaikan kebutuhan dan
+          kompleksitas kasus. Hubungi kami untuk informasi lebih lanjut.</p>
+      </div>
+    </div>
+  </section>
+  <section id="lokasi" class="py-20 relative overflow-hidden"
+    style="background:linear-gradient(180deg,#FDFBF7 0%,#F5EFE6 100%)" aria-labelledby="kh2">
+    <div class="absolute top-0 left-0 right-0 h-1" style="background:linear-gradient(90deg,#4A1468,#F4A7C0,#4A1468)">
+    </div>
+    <div class="absolute -bottom-10 -right-10 w-64 h-64 blob af pointer-events-none"
+      style="background:rgba(244,167,192,.18)"></div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center mb-14 reveal">
+        <span class="text-xs font-bold tracking-widest text-[#F4A7C0] uppercase">Temui Kami</span>
+        <h2 id="kh2" class="text-3xl sm:text-4xl font-bold text-[#4A1468] mt-2 section-title"
+          style="font-family:'Playfair Display',Georgia,serif">Informasi &amp; Kontak</h2>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+        <div class="reveal flex flex-col gap-5">
+          <div class="bg-white rounded-3xl p-6 shadow border border-[#F4A7C0]/20 flex items-start gap-4">
+            <div class="w-12 h-12 rounded-2xl flex items-center justify-center text-2xl flex-shrink-0"
+              style="background:rgba(244,167,192,.25)">&#128336;</div>
+            <div>
+              <h3 class="font-bold text-[#4A1468] text-base mb-1">Jam Layanan</h3>
+              <p class="text-[#7B5C8C] text-sm">Berdasarkan Perjanjian <em>(By Appointment)</em></p>
+              <p class="text-[#4A1468] font-bold text-sm mt-1">13.00 &ndash; 18.00 WITA</p>
+              <p class="text-[#7B5C8C] text-xs mt-0.5">Hubungi kami untuk menjadwalkan sesi Anda</p>
+            </div>
+          </div>
+          <div class="bg-white rounded-3xl p-6 shadow border border-[#F4A7C0]/20 flex items-start gap-4">
+            <div class="w-12 h-12 rounded-2xl flex items-center justify-center text-2xl flex-shrink-0"
+              style="background:rgba(74,20,104,.1)">&#128205;</div>
+            <div>
+              <h3 class="font-bold text-[#4A1468] text-base mb-1">Alamat</h3>
+              <address class="not-italic text-[#7B5C8C] text-sm leading-relaxed">
+                Depan Masjid Al-Huda Tobongon,<br />
+                Modayag, Bolaang Mongondow Timur,<br />
+                Sulawesi Utara
+              </address>
+              <span
+                class="inline-flex items-center gap-1 mt-2 text-xs font-semibold text-[#4A1468] bg-[#F5EFE6] px-2.5 py-1 rounded-full">&#127982;
+                Ruko Edelweiss (Di dalam)</span>
+            </div>
+          </div>
+          <div class="bg-white rounded-3xl p-6 shadow border border-[#F4A7C0]/20 flex items-start gap-4">
+            <div class="w-12 h-12 rounded-2xl flex items-center justify-center text-2xl flex-shrink-0"
+              style="background:rgba(244,167,192,.25)">&#128248;</div>
+            <div>
+              <h3 class="font-bold text-[#4A1468] text-base mb-1">Instagram</h3>
+              <a href="https://www.instagram.com/rumahsehatdahlia" target="_blank" rel="noopener noreferrer"
+                class="text-[#4A1468] font-bold text-sm hover:text-[#7B5C8C] transition-colors underline decoration-[#F4A7C0]">@rumahsehatdahlia</a>
+              <p class="text-[#7B5C8C] text-xs mt-1">Tips kesehatan mental dan info layanan terkini</p>
+            </div>
+          </div>
+        </div>
+        <div class="reveal flex flex-col gap-5">
+          <div class="rounded-3xl p-8 text-center relative overflow-hidden"
+            style="background:linear-gradient(135deg,#4A1468 0%,#7B2D96 100%)">
+            <div class="absolute top-0 right-0 w-32 h-32 rounded-full opacity-10 -translate-y-8 translate-x-8"
+              style="background:white"></div>
+            <div class="absolute bottom-0 left-0 w-24 h-24 rounded-full opacity-10 translate-y-6 -translate-x-6"
+              style="background:#F4A7C0"></div>
+            <div class="relative z-10">
+              <div class="text-5xl mb-4">&#128172;</div>
+              <h3 class="text-2xl font-bold text-white mb-2" style="font-family:'Playfair Display',Georgia,serif">Siap
+                Berkonsultasi?</h3>
+              <p class="text-white/80 text-sm leading-relaxed mb-6">Hubungi kami melalui WhatsApp untuk membuat jadwal
+                sesi. Kami akan membantu memilih layanan yang paling sesuai untuk Anda.</p>
+              <a href="https://wa.me/62895806578761?text=Halo%20Rumah%20Sehat%20Dahlia,%20saya%20ingin%20membuat%20janji%20temu"
+                target="_blank" rel="noopener noreferrer"
+                class="inline-flex items-center justify-center gap-3 bg-white text-[#4A1468] font-bold text-base px-8 py-4 rounded-2xl hover:bg-[#F9C8D9] transition-all shadow-lg w-full">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 flex-shrink-0" fill="#4A1468" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg> Chat via WhatsApp
+              </a>
+              <p class="text-white/55 text-xs mt-3">+62 895-8065-78761</p>
+            </div>
+          </div>
+          <div class="bg-white rounded-3xl p-5 shadow border border-[#F4A7C0]/20">
+            <div class="flex items-start gap-3">
+              <span class="text-xl flex-shrink-0 mt-0.5">&#128161;</span>
+              <div>
+                <p class="font-bold text-[#4A1468] text-sm mb-2">Cara Membuat Janji Temu</p>
+                <ol class="text-[#7B5C8C] text-xs leading-relaxed space-y-1 list-decimal list-inside">
+                  <li>Kirim pesan WhatsApp atau DM Instagram kami</li>
+                  <li>Ceritakan secara singkat kebutuhan Anda</li>
+                  <li>Kami sarankan layanan yang paling sesuai</li>
+                  <li>Tentukan jadwal sesi bersama</li>
+                </ol>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="reveal grid grid-cols-2 gap-4">
-        <div class="bg-white rounded-3xl p-5 shadow border border-[#F4A7C0]/20 flex flex-col items-center text-center gap-2 hover:shadow-lg transition-shadow">
-          <div class="w-12 h-12 rounded-2xl flex items-center justify-center text-2xl" style="background:rgba(244,167,192,.25)">&#127807;</div>
-          <h3 class="text-[#4A1468] font-bold text-sm">Pertumbuhan Diri</h3>
-          <p class="text-[#7B5C8C] text-xs leading-relaxed">Mendorong pemahaman diri yang mendalam</p>
-        </div>
-        <div class="bg-white rounded-3xl p-5 shadow border border-[#F4A7C0]/20 flex flex-col items-center text-center gap-2 hover:shadow-lg transition-shadow">
-          <div class="w-12 h-12 rounded-2xl flex items-center justify-center text-2xl" style="background:rgba(74,20,104,.1)">&#128172;</div>
-          <h3 class="text-[#4A1468] font-bold text-sm">Komunikasi Terbuka</h3>
-          <p class="text-[#7B5C8C] text-xs leading-relaxed">Ruang aman untuk berbagi cerita</p>
-        </div>
-        <div class="bg-white rounded-3xl p-5 shadow border border-[#F4A7C0]/20 flex flex-col items-center text-center gap-2 hover:shadow-lg transition-shadow">
-          <div class="w-12 h-12 rounded-2xl flex items-center justify-center text-2xl" style="background:rgba(244,167,192,.25)">&#127891;</div>
-          <h3 class="text-[#4A1468] font-bold text-sm">Berbasis Edukasi</h3>
-          <p class="text-[#7B5C8C] text-xs leading-relaxed">Pendekatan ilmiah yang mudah dipahami</p>
-        </div>
-        <div class="bg-white rounded-3xl p-5 shadow border border-[#F4A7C0]/20 flex flex-col items-center text-center gap-2 hover:shadow-lg transition-shadow">
-          <div class="w-12 h-12 rounded-2xl flex items-center justify-center text-2xl" style="background:rgba(74,20,104,.1)">&#129309;</div>
-          <h3 class="text-[#4A1468] font-bold text-sm">Penuh Empati</h3>
-          <p class="text-[#7B5C8C] text-xs leading-relaxed">Tanpa stigma, tanpa penghakiman</p>
-        </div>
-      </div>
     </div>
-  </div>
-</section>
-<section id="layanan" class="py-20 relative overflow-hidden" style="background:linear-gradient(180deg,#FDFBF7 0%,#F5EFE6 50%,#FDFBF7 100%)" aria-labelledby="lh2">
-  <div class="absolute top-10 right-0 w-60 h-60 blob2 afs pointer-events-none" style="background:rgba(244,167,192,.14)"></div>
-  <div class="absolute bottom-10 left-0 w-52 h-52 blob af pointer-events-none" style="background:rgba(74,20,104,.06)"></div>
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-    <div class="text-center mb-14 reveal">
-      <span class="text-xs font-bold tracking-widest text-[#F4A7C0] uppercase">Yang Kami Tawarkan</span>
-      <h2 id="lh2" class="text-3xl sm:text-4xl font-bold text-[#4A1468] mt-2 section-title" style="font-family:'Playfair Display',Georgia,serif">Layanan Kami</h2>
-      <p class="text-[#7B5C8C] mt-4 max-w-xl mx-auto text-sm">Berbagai layanan edukatif yang dapat disesuaikan dengan kebutuhan Anda dan keluarga.</p>
+  </section>
+  <footer class="bg-[#4A1468] text-white" role="contentinfo">
+    <div class="overflow-hidden leading-none -mb-0.5 pointer-events-none" aria-hidden="true">
+      <svg viewBox="0 0 1440 50" preserveAspectRatio="none" style="width:100%;height:50px;display:block">
+        <path d="M0,25 C480,50 960,0 1440,25 L1440,0 L0,0 Z" fill="#F5EFE6" />
+      </svg>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      <article class="sc bg-white rounded-3xl p-6 shadow border border-[#F4A7C0]/20 flex flex-col gap-4 reveal">
-        <div class="w-14 h-14 rounded-2xl flex items-center justify-center text-3xl" style="background:linear-gradient(135deg,rgba(244,167,192,.35),rgba(244,167,192,.1))">&#129504;</div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
         <div>
-          <h3 class="text-lg font-bold text-[#4A1468] mb-2" style="font-family:'Playfair Display',Georgia,serif">Konseling Edukatif Individu</h3>
-          <p class="text-[#7B5C8C] text-sm leading-relaxed">Sesi personal untuk memahami dan mengatasi masalah belajar, stres ringan, serta tantangan keseharian yang mengganggu produktivitas dan kesejahteraan.</p>
-        </div>
-        <div class="mt-auto pt-3 border-t border-[#F4A7C0]/20 flex flex-wrap gap-2">
-          <span class="text-xs bg-[#F9C8D9]/50 text-[#4A1468] px-2.5 py-1 rounded-full font-semibold">Masalah Belajar</span>
-          <span class="text-xs bg-[#F9C8D9]/50 text-[#4A1468] px-2.5 py-1 rounded-full font-semibold">Stres Ringan</span>
-        </div>
-      </article>
-      <article class="sc bg-white rounded-3xl p-6 shadow border border-[#F4A7C0]/20 flex flex-col gap-4 reveal">
-        <div class="w-14 h-14 rounded-2xl flex items-center justify-center text-3xl" style="background:linear-gradient(135deg,rgba(74,20,104,.12),rgba(74,20,104,.05))">&#128106;</div>
-        <div>
-          <h3 class="text-lg font-bold text-[#4A1468] mb-2" style="font-family:'Playfair Display',Georgia,serif">Konsultasi Parenting</h3>
-          <p class="text-[#7B5C8C] text-sm leading-relaxed">Pendampingan bagi orang tua dalam membangun pola asuh yang sehat, meningkatkan komunikasi keluarga, dan menciptakan lingkungan rumah penuh kasih sayang.</p>
-        </div>
-        <div class="mt-auto pt-3 border-t border-[#F4A7C0]/20 flex flex-wrap gap-2">
-          <span class="text-xs bg-[#F9C8D9]/50 text-[#4A1468] px-2.5 py-1 rounded-full font-semibold">Pola Asuh</span>
-          <span class="text-xs bg-[#F9C8D9]/50 text-[#4A1468] px-2.5 py-1 rounded-full font-semibold">Komunikasi Keluarga</span>
-        </div>
-      </article>
-      <article class="sc bg-white rounded-3xl p-6 shadow border border-[#F4A7C0]/20 flex flex-col gap-4 reveal">
-        <div class="w-14 h-14 rounded-2xl flex items-center justify-center text-3xl" style="background:linear-gradient(135deg,rgba(244,167,192,.35),rgba(244,167,192,.1))">&#127775;</div>
-        <div>
-          <h3 class="text-lg font-bold text-[#4A1468] mb-2" style="font-family:'Playfair Display',Georgia,serif">Konseling Remaja</h3>
-          <p class="text-[#7B5C8C] text-sm leading-relaxed">Ruang aman untuk remaja berbicara tentang tekanan sekolah, hubungan pertemanan, identitas diri, dan tantangan masa tumbuh kembang.</p>
-        </div>
-        <div class="mt-auto pt-3 border-t border-[#F4A7C0]/20 flex flex-wrap gap-2">
-          <span class="text-xs bg-[#F9C8D9]/50 text-[#4A1468] px-2.5 py-1 rounded-full font-semibold">Stres Sekolah</span>
-          <span class="text-xs bg-[#F9C8D9]/50 text-[#4A1468] px-2.5 py-1 rounded-full font-semibold">Relasi Teman Sebaya</span>
-        </div>
-      </article>
-      <article class="sc bg-white rounded-3xl p-6 shadow border border-[#F4A7C0]/20 flex flex-col gap-4 reveal">
-        <div class="w-14 h-14 rounded-2xl flex items-center justify-center text-3xl" style="background:linear-gradient(135deg,rgba(74,20,104,.12),rgba(74,20,104,.05))">&#128218;</div>
-        <div>
-          <h3 class="text-lg font-bold text-[#4A1468] mb-2" style="font-family:'Playfair Display',Georgia,serif">Psikoedukasi &amp; Kelas Kecil</h3>
-          <p class="text-[#7B5C8C] text-sm leading-relaxed">Sesi kelompok interaktif yang membahas tema kesehatan mental secara edukatif: manajemen emosi, teknik relaksasi, dan pemahaman psikologi dasar sehari-hari.</p>
-        </div>
-        <div class="mt-auto pt-3 border-t border-[#F4A7C0]/20 flex flex-wrap gap-2">
-          <span class="text-xs bg-[#F9C8D9]/50 text-[#4A1468] px-2.5 py-1 rounded-full font-semibold">Kelompok Kecil</span>
-          <span class="text-xs bg-[#F9C8D9]/50 text-[#4A1468] px-2.5 py-1 rounded-full font-semibold">Interaktif</span>
-        </div>
-      </article>
-      <article class="sc rounded-3xl p-7 flex flex-col gap-4 reveal sm:col-span-2" style="background:linear-gradient(135deg,#4A1468 0%,#6B21A8 100%)">
-        <div class="flex items-start gap-4">
-          <div class="w-14 h-14 rounded-2xl flex items-center justify-center text-3xl flex-shrink-0 bg-white/15">&#128269;</div>
-          <div>
-            <span class="inline-flex items-center gap-1.5 bg-[#F4A7C0]/30 text-white text-xs font-bold px-3 py-1 rounded-full mb-2">Langkah Awal</span>
-            <h3 class="text-xl font-bold text-white mb-2" style="font-family:'Playfair Display',Georgia,serif">Screening &amp; Observasi Awal</h3>
-            <p class="text-white/80 text-sm leading-relaxed">Sesi awal untuk memahami kondisi dan kebutuhan klien secara menyeluruh. Hasil observasi membantu menentukan layanan yang paling sesuai, atau memberikan rujukan ke profesional yang tepat bila diperlukan.</p>
+          <div class="flex items-center gap-2 mb-4">
+            <img src="logo.png" alt="Logo Rumah Sehat Dahlia" width="38" height="38"
+              class="rounded-xl object-cover flex-shrink-0" style="width:38px;height:38px" />
+            <div>
+              <p class="text-white font-bold text-lg tracking-wider"
+                style="font-family:'Playfair Display',Georgia,serif">Rumah Sehat Dahlia</p>
+            </div>
           </div>
-        </div>
-        <div class="pt-3 border-t border-white/20 flex flex-wrap gap-2">
-          <span class="text-xs bg-white/20 text-white px-2.5 py-1 rounded-full font-semibold">Asesmen Awal</span>
-          <span class="text-xs bg-white/20 text-white px-2.5 py-1 rounded-full font-semibold">Rekomendasi Layanan</span>
-          <span class="text-xs bg-white/20 text-white px-2.5 py-1 rounded-full font-semibold">Sistem Rujukan</span>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-<section id="harga" class="py-20 bg-[#FDFBF7]" aria-labelledby="hh2">
-  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-14 reveal">
-      <span class="text-xs font-bold tracking-widest text-[#F4A7C0] uppercase">Transparan &amp; Terjangkau</span>
-      <h2 id="hh2" class="text-3xl sm:text-4xl font-bold text-[#4A1468] mt-2 section-title" style="font-family:'Playfair Display',Georgia,serif">Harga Layanan</h2>
-      <p class="text-[#7B5C8C] mt-4 max-w-md mx-auto text-sm">Kami percaya kesehatan mental harus dapat diakses oleh semua orang.</p>
-    </div>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div class="pc bg-white rounded-3xl p-7 shadow border border-[#F4A7C0]/20 flex flex-col items-center text-center reveal">
-        <div class="w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mb-4" style="background:linear-gradient(135deg,rgba(244,167,192,.35),rgba(244,167,192,.1))">&#128483;&#65039;</div>
-        <h3 class="font-bold text-[#4A1468] mb-1 text-lg" style="font-family:'Playfair Display',Georgia,serif">Konseling &amp; Konsultasi</h3>
-        <p class="text-xs text-[#7B5C8C] mb-4">Per sesi (&#177;60 menit)</p>
-        <div class="bg-[#F5EFE6] rounded-2xl px-5 py-3 w-full mb-4">
-          <p class="text-2xl font-bold text-[#4A1468]" style="font-family:'Playfair Display',Georgia,serif">Rp 50.000</p>
-          <p class="text-xs text-[#7B5C8C]">&ndash; Rp 100.000 / sesi</p>
-        </div>
-        <ul class="w-full text-left space-y-2">
-          <li class="flex items-center gap-2 text-sm text-[#7B5C8C]"><span class="text-[#4A1468] font-bold">&#10003;</span>Konseling Edukatif Individu</li>
-          <li class="flex items-center gap-2 text-sm text-[#7B5C8C]"><span class="text-[#4A1468] font-bold">&#10003;</span>Konsultasi Parenting</li>
-          <li class="flex items-center gap-2 text-sm text-[#7B5C8C]"><span class="text-[#4A1468] font-bold">&#10003;</span>Konseling Remaja</li>
-        </ul>
-      </div>
-      <div class="pc rounded-3xl p-7 flex flex-col items-center text-center reveal relative overflow-hidden" style="background:linear-gradient(160deg,#4A1468 0%,#7B2D96 100%)">
-        <div class="absolute top-4 right-4"><span class="text-xs font-bold bg-[#F4A7C0] text-[#4A1468] px-2.5 py-1 rounded-full">Populer</span></div>
-        <div class="w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mb-4 bg-white/15">&#128218;</div>
-        <h3 class="font-bold text-white mb-1 text-lg" style="font-family:'Playfair Display',Georgia,serif">Psikoedukasi &amp; Kelas</h3>
-        <p class="text-xs text-white/70 mb-4">Per orang per sesi</p>
-        <div class="bg-white/15 rounded-2xl px-5 py-3 w-full mb-4">
-          <p class="text-2xl font-bold text-white" style="font-family:'Playfair Display',Georgia,serif">Rp 25.000</p>
-          <p class="text-xs text-white/80">&ndash; Rp 75.000 / orang</p>
-        </div>
-        <ul class="w-full text-left space-y-2">
-          <li class="flex items-center gap-2 text-sm text-white/85"><span class="text-[#F4A7C0] font-bold">&#10003;</span>Kelas psikoedukasi tematis</li>
-          <li class="flex items-center gap-2 text-sm text-white/85"><span class="text-[#F4A7C0] font-bold">&#10003;</span>Diskusi kelompok kecil</li>
-          <li class="flex items-center gap-2 text-sm text-white/85"><span class="text-[#F4A7C0] font-bold">&#10003;</span>Materi &amp; modul tersedia</li>
-        </ul>
-      </div>
-      <div class="pc bg-white rounded-3xl p-7 shadow border border-[#F4A7C0]/20 flex flex-col items-center text-center reveal">
-        <div class="w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mb-4" style="background:linear-gradient(135deg,rgba(74,20,104,.12),rgba(74,20,104,.05))">&#128269;</div>
-        <h3 class="font-bold text-[#4A1468] mb-1 text-lg" style="font-family:'Playfair Display',Georgia,serif">Screening &amp; Observasi</h3>
-        <p class="text-xs text-[#7B5C8C] mb-4">Per orang per sesi</p>
-        <div class="bg-[#F5EFE6] rounded-2xl px-5 py-3 w-full mb-4">
-          <p class="text-2xl font-bold text-[#4A1468]" style="font-family:'Playfair Display',Georgia,serif">Rp 100.000</p>
-          <p class="text-xs text-[#7B5C8C]">&ndash; Rp 150.000 / orang</p>
-        </div>
-        <ul class="w-full text-left space-y-2">
-          <li class="flex items-center gap-2 text-sm text-[#7B5C8C]"><span class="text-[#4A1468] font-bold">&#10003;</span>Asesmen kebutuhan awal</li>
-          <li class="flex items-center gap-2 text-sm text-[#7B5C8C]"><span class="text-[#4A1468] font-bold">&#10003;</span>Laporan observasi ringkas</li>
-          <li class="flex items-center gap-2 text-sm text-[#7B5C8C]"><span class="text-[#4A1468] font-bold">&#10003;</span>Rekomendasi layanan lanjut</li>
-        </ul>
-      </div>
-    </div>
-    <div class="mt-8 rounded-2xl p-4 text-center reveal" style="background:rgba(249,200,217,.4)" role="note">
-      <p class="text-[#4A1468] text-sm"><strong>&#128204; Catatan:</strong> Harga dapat menyesuaikan kebutuhan dan kompleksitas kasus. Hubungi kami untuk informasi lebih lanjut.</p>
-    </div>
-  </div>
-</section>
-<section id="lokasi" class="py-20 relative overflow-hidden" style="background:linear-gradient(180deg,#FDFBF7 0%,#F5EFE6 100%)" aria-labelledby="kh2">
-  <div class="absolute top-0 left-0 right-0 h-1" style="background:linear-gradient(90deg,#4A1468,#F4A7C0,#4A1468)"></div>
-  <div class="absolute -bottom-10 -right-10 w-64 h-64 blob af pointer-events-none" style="background:rgba(244,167,192,.18)"></div>
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-    <div class="text-center mb-14 reveal">
-      <span class="text-xs font-bold tracking-widest text-[#F4A7C0] uppercase">Temui Kami</span>
-      <h2 id="kh2" class="text-3xl sm:text-4xl font-bold text-[#4A1468] mt-2 section-title" style="font-family:'Playfair Display',Georgia,serif">Informasi &amp; Kontak</h2>
-    </div>
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-      <div class="reveal flex flex-col gap-5">
-        <div class="bg-white rounded-3xl p-6 shadow border border-[#F4A7C0]/20 flex items-start gap-4">
-          <div class="w-12 h-12 rounded-2xl flex items-center justify-center text-2xl flex-shrink-0" style="background:rgba(244,167,192,.25)">&#128336;</div>
-          <div>
-            <h3 class="font-bold text-[#4A1468] text-base mb-1">Jam Layanan</h3>
-            <p class="text-[#7B5C8C] text-sm">Berdasarkan Perjanjian <em>(By Appointment)</em></p>
-            <p class="text-[#4A1468] font-bold text-sm mt-1">13.00 &ndash; 18.00 WITA</p>
-            <p class="text-[#7B5C8C] text-xs mt-0.5">Hubungi kami untuk menjadwalkan sesi Anda</p>
-          </div>
-        </div>
-        <div class="bg-white rounded-3xl p-6 shadow border border-[#F4A7C0]/20 flex items-start gap-4">
-          <div class="w-12 h-12 rounded-2xl flex items-center justify-center text-2xl flex-shrink-0" style="background:rgba(74,20,104,.1)">&#128205;</div>
-          <div>
-            <h3 class="font-bold text-[#4A1468] text-base mb-1">Alamat</h3>
-            <address class="not-italic text-[#7B5C8C] text-sm leading-relaxed">
-              Depan Masjid Al-Huda Tobongon,<br/>
-              Modayag, Bolaang Mongondow Timur,<br/>
-              Sulawesi Utara
-            </address>
-            <span class="inline-flex items-center gap-1 mt-2 text-xs font-semibold text-[#4A1468] bg-[#F5EFE6] px-2.5 py-1 rounded-full">&#127982; Ruko Edelweiss (Di dalam)</span>
-          </div>
-        </div>
-        <div class="bg-white rounded-3xl p-6 shadow border border-[#F4A7C0]/20 flex items-start gap-4">
-          <div class="w-12 h-12 rounded-2xl flex items-center justify-center text-2xl flex-shrink-0" style="background:rgba(244,167,192,.25)">&#128248;</div>
-          <div>
-            <h3 class="font-bold text-[#4A1468] text-base mb-1">Instagram</h3>
+          <p class="text-white/70 text-sm leading-relaxed mb-4">Layanan psikologis edukatif dan non-klinis untuk
+            individu dan keluarga di Modayag, Bolaang Mongondow Timur.</p>
+          <div class="flex gap-3">
             <a href="https://www.instagram.com/rumahsehatdahlia" target="_blank" rel="noopener noreferrer"
-               class="text-[#4A1468] font-bold text-sm hover:text-[#7B5C8C] transition-colors underline decoration-[#F4A7C0]">@rumahsehatdahlia</a>
-            <p class="text-[#7B5C8C] text-xs mt-1">Tips kesehatan mental dan info layanan terkini</p>
-          </div>
-        </div>
-      </div>
-      <div class="reveal flex flex-col gap-5">
-        <div class="rounded-3xl p-8 text-center relative overflow-hidden" style="background:linear-gradient(135deg,#4A1468 0%,#7B2D96 100%)">
-          <div class="absolute top-0 right-0 w-32 h-32 rounded-full opacity-10 -translate-y-8 translate-x-8" style="background:white"></div>
-          <div class="absolute bottom-0 left-0 w-24 h-24 rounded-full opacity-10 translate-y-6 -translate-x-6" style="background:#F4A7C0"></div>
-          <div class="relative z-10">
-            <div class="text-5xl mb-4">&#128172;</div>
-            <h3 class="text-2xl font-bold text-white mb-2" style="font-family:'Playfair Display',Georgia,serif">Siap Berkonsultasi?</h3>
-            <p class="text-white/80 text-sm leading-relaxed mb-6">Hubungi kami melalui WhatsApp untuk membuat jadwal sesi. Kami akan membantu memilih layanan yang paling sesuai untuk Anda.</p>
-            <a href="https://wa.me/62895806578761?text=Halo%20Rumah%20Sehat%20Dahlia,%20saya%20ingin%20membuat%20janji%20temu" target="_blank" rel="noopener noreferrer"
-               class="inline-flex items-center justify-center gap-3 bg-white text-[#4A1468] font-bold text-base px-8 py-4 rounded-2xl hover:bg-[#F9C8D9] transition-all shadow-lg w-full">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 flex-shrink-0" fill="#4A1468" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Chat via WhatsApp
+              aria-label="Instagram"
+              class="w-9 h-9 bg-white/15 rounded-xl flex items-center justify-center hover:bg-[#F4A7C0]/30 transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="white" viewBox="0 0 24 24"
+                aria-hidden="true">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+              </svg>
             </a>
-            <p class="text-white/55 text-xs mt-3">+62 895-8065-78761</p>
+            <a href="https://wa.me/62895806578761" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"
+              class="w-9 h-9 bg-white/15 rounded-xl flex items-center justify-center hover:bg-[#F4A7C0]/30 transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"
+                aria-hidden="true">
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+              </svg>
+            </a>
           </div>
         </div>
-        <div class="bg-white rounded-3xl p-5 shadow border border-[#F4A7C0]/20">
-          <div class="flex items-start gap-3">
-            <span class="text-xl flex-shrink-0 mt-0.5">&#128161;</span>
-            <div>
-              <p class="font-bold text-[#4A1468] text-sm mb-2">Cara Membuat Janji Temu</p>
-              <ol class="text-[#7B5C8C] text-xs leading-relaxed space-y-1 list-decimal list-inside">
-                <li>Kirim pesan WhatsApp atau DM Instagram kami</li>
-                <li>Ceritakan secara singkat kebutuhan Anda</li>
-                <li>Kami sarankan layanan yang paling sesuai</li>
-                <li>Tentukan jadwal sesi bersama</li>
-              </ol>
-            </div>
+        <nav aria-label="Footer navigation">
+          <h4 class="font-bold text-white mb-4 text-sm tracking-wider uppercase">Navigasi</h4>
+          <ul class="space-y-2">
+            <li><a href="#tentang" class="text-white/70 text-sm hover:text-[#F4A7C0] transition-colors">Tentang Kami</a>
+            </li>
+            <li><a href="#layanan" class="text-white/70 text-sm hover:text-[#F4A7C0] transition-colors">Layanan Kami</a>
+            </li>
+            <li><a href="#harga" class="text-white/70 text-sm hover:text-[#F4A7C0] transition-colors">Harga Layanan</a>
+            </li>
+            <li><a href="#lokasi" class="text-white/70 text-sm hover:text-[#F4A7C0] transition-colors">Lokasi &amp;
+                Kontak</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h4 class="font-bold text-white mb-4 text-sm tracking-wider uppercase">Disclaimer</h4>
+          <p class="text-white/65 text-xs leading-relaxed mb-4">Rumah Sehat Dahlia adalah layanan edukatif dan <strong
+              class="text-white/85">bukan klinik psikologi</strong>. Seluruh informasi klien dijaga kerahasiaannya
+            secara ketat.</p>
+          <div class="flex items-center gap-2 bg-white/10 rounded-xl px-3 py-2">
+            <span class="text-[#F4A7C0] text-lg">&#128274;</span>
+            <p class="text-white/70 text-xs">Kerahasiaan klien selalu terjaga</p>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-<footer class="bg-[#4A1468] text-white" role="contentinfo">
-  <div class="overflow-hidden leading-none -mb-0.5 pointer-events-none" aria-hidden="true">
-    <svg viewBox="0 0 1440 50" preserveAspectRatio="none" style="width:100%;height:50px;display:block"><path d="M0,25 C480,50 960,0 1440,25 L1440,0 L0,0 Z" fill="#F5EFE6"/></svg>
-  </div>
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-      <div>
-        <div class="flex items-center gap-2 mb-4">
-          <img src="logo.png" alt="Logo Rumah Sehat Dahlia" width="38" height="38" class="rounded-xl object-cover flex-shrink-0" style="width:38px;height:38px"/>
-          <div>
-            <p class="text-white font-bold text-lg tracking-wider" style="font-family:'Playfair Display',Georgia,serif">Rumah Sehat Dahlia</p>
-          </div>
-        </div>
-        <p class="text-white/70 text-sm leading-relaxed mb-4">Layanan psikologis edukatif dan non-klinis untuk individu dan keluarga di Modayag, Bolaang Mongondow Timur.</p>
-        <div class="flex gap-3">
-          <a href="https://www.instagram.com/rumahsehatdahlia" target="_blank" rel="noopener noreferrer" aria-label="Instagram"
-             class="w-9 h-9 bg-white/15 rounded-xl flex items-center justify-center hover:bg-[#F4A7C0]/30 transition-colors">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="white" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-          </a>
-          <a href="https://wa.me/62895806578761" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"
-             class="w-9 h-9 bg-white/15 rounded-xl flex items-center justify-center hover:bg-[#F4A7C0]/30 transition-colors">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-          </a>
-        </div>
-      </div>
-      <nav aria-label="Footer navigation">
-        <h4 class="font-bold text-white mb-4 text-sm tracking-wider uppercase">Navigasi</h4>
-        <ul class="space-y-2">
-          <li><a href="#tentang" class="text-white/70 text-sm hover:text-[#F4A7C0] transition-colors">Tentang Kami</a></li>
-          <li><a href="#layanan" class="text-white/70 text-sm hover:text-[#F4A7C0] transition-colors">Layanan Kami</a></li>
-          <li><a href="#harga"   class="text-white/70 text-sm hover:text-[#F4A7C0] transition-colors">Harga Layanan</a></li>
-          <li><a href="#lokasi"  class="text-white/70 text-sm hover:text-[#F4A7C0] transition-colors">Lokasi &amp; Kontak</a></li>
-        </ul>
-      </nav>
-      <div>
-        <h4 class="font-bold text-white mb-4 text-sm tracking-wider uppercase">Disclaimer</h4>
-        <p class="text-white/65 text-xs leading-relaxed mb-4">Rumah Sehat Dahlia adalah layanan edukatif dan <strong class="text-white/85">bukan klinik psikologi</strong>. Seluruh informasi klien dijaga kerahasiaannya secara ketat.</p>
-        <div class="flex items-center gap-2 bg-white/10 rounded-xl px-3 py-2">
-          <span class="text-[#F4A7C0] text-lg">&#128274;</span>
-          <p class="text-white/70 text-xs">Kerahasiaan klien selalu terjaga</p>
-        </div>
+      <div class="mt-10 pt-6 border-t border-white/15 flex flex-col sm:flex-row items-center justify-between gap-2">
+        <p class="text-white/50 text-xs">&#169; 2024 Rumah Sehat Dahlia. Semua hak dilindungi.</p>
+        <p class="text-white/40 text-xs">Modayag, Bolaang Mongondow Timur, Sulawesi Utara</p>
       </div>
     </div>
-    <div class="mt-10 pt-6 border-t border-white/15 flex flex-col sm:flex-row items-center justify-between gap-2">
-      <p class="text-white/50 text-xs">&#169; 2024 Rumah Sehat Dahlia. Semua hak dilindungi.</p>
-      <p class="text-white/40 text-xs">Modayag, Bolaang Mongondow Timur, Sulawesi Utara</p>
-    </div>
-  </div>
-</footer>
-<a id="waf" href="https://wa.me/62895806578761?text=Halo%20Rumah%20Sehat%20Dahlia,%20saya%20ingin%20membuat%20janji%20temu" target="_blank" rel="noopener noreferrer"
-   class="bp flex items-center justify-center w-14 h-14 rounded-full shadow-xl"
-   style="background:linear-gradient(135deg,#25D366,#128C7E)" aria-label="Chat WhatsApp">
-  <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="white" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-</a>
+  </footer>
+  <a id="waf"
+    href="https://wa.me/62895806578761?text=Halo%20Rumah%20Sehat%20Dahlia,%20saya%20ingin%20membuat%20janji%20temu"
+    target="_blank" rel="noopener noreferrer"
+    class="bp flex items-center justify-center w-14 h-14 rounded-full shadow-xl"
+    style="background:linear-gradient(135deg,#25D366,#128C7E)" aria-label="Chat WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="white" viewBox="0 0 24 24" aria-hidden="true">
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+    </svg>
+  </a>
 
-<script>
-'use strict';
-document.querySelectorAll('a[href^="#"]').forEach(function(a){
-  a.addEventListener('click',function(e){
-    var h=this.getAttribute('href');
-    if(h==='#')return;
-    var t=document.querySelector(h);
-    if(!t)return;
-    e.preventDefault();
-    var nh=document.getElementById('navbar').offsetHeight;
-    window.scrollTo({top:t.getBoundingClientRect().top+window.pageYOffset-nh-8,behavior:'smooth'});
-  });
-});
-var nb=document.getElementById('navbar');
-window.addEventListener('scroll',function(){nb.classList.toggle('scrolled',window.scrollY>50);},{passive:true});
-var ham=document.getElementById('ham'),mm=document.getElementById('mm');
-var h1=document.getElementById('h1'),h2=document.getElementById('h2'),h3=document.getElementById('h3');
-var open=false;
-function tog(){
-  open=!open;mm.classList.toggle('open',open);ham.setAttribute('aria-expanded',open);
-  h1.style.transform=open?'translateY(8px) rotate(45deg)':'';
-  h2.style.opacity=open?'0':'';
-  h3.style.transform=open?'translateY(-8px) rotate(-45deg)':'';
-}
-ham.addEventListener('click',tog);
-document.querySelectorAll('.ml').forEach(function(l){l.addEventListener('click',function(){if(open)tog();});});
-var rEls=document.querySelectorAll('.reveal');
-var rObs=new IntersectionObserver(function(es){es.forEach(function(e){
-  if(!e.isIntersecting)return;
-  var sibs=Array.from(e.target.parentElement.children).filter(function(c){return c.classList.contains('reveal');});
-  var d=sibs.indexOf(e.target)*90;
-  setTimeout(function(){e.target.classList.add('visible');},d);
-  rObs.unobserve(e.target);
-});},{threshold:0.12,rootMargin:'0px 0px -36px 0px'});
-rEls.forEach(function(el){rObs.observe(el);});
-</script>
+  <script>
+    'use strict';
+    document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+      a.addEventListener('click', function (e) {
+        var h = this.getAttribute('href');
+        if (h === '#') return;
+        var t = document.querySelector(h);
+        if (!t) return;
+        e.preventDefault();
+        var nh = document.getElementById('navbar').offsetHeight;
+        window.scrollTo({ top: t.getBoundingClientRect().top + window.pageYOffset - nh - 8, behavior: 'smooth' });
+      });
+    });
+    var nb = document.getElementById('navbar');
+    window.addEventListener('scroll', function () { nb.classList.toggle('scrolled', window.scrollY > 50); }, { passive: true });
+    var ham = document.getElementById('ham'), mm = document.getElementById('mm');
+    var h1 = document.getElementById('h1'), h2 = document.getElementById('h2'), h3 = document.getElementById('h3');
+    var open = false;
+    function tog() {
+      open = !open; mm.classList.toggle('open', open); ham.setAttribute('aria-expanded', open);
+      h1.style.transform = open ? 'translateY(8px) rotate(45deg)' : '';
+      h2.style.opacity = open ? '0' : '';
+      h3.style.transform = open ? 'translateY(-8px) rotate(-45deg)' : '';
+    }
+    ham.addEventListener('click', tog);
+    document.querySelectorAll('.ml').forEach(function (l) { l.addEventListener('click', function () { if (open) tog(); }); });
+    var rEls = document.querySelectorAll('.reveal');
+    var rObs = new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        var sibs = Array.from(e.target.parentElement.children).filter(function (c) { return c.classList.contains('reveal'); });
+        var d = sibs.indexOf(e.target) * 90;
+        setTimeout(function () { e.target.classList.add('visible'); }, d);
+        rObs.unobserve(e.target);
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -36px 0px' });
+    rEls.forEach(function (el) { rObs.observe(el); });
+  </script>
 </body>
+
 </html>
